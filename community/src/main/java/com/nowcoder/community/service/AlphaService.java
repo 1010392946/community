@@ -38,7 +38,7 @@ public class AlphaService {
         System.out.println("destory");
     }
 
-    public String find(){
-        return alphaDao.select();
-    }
+//    public String find(){
+//        return alphaDao.select();
+//    }
 }
