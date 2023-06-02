@@ -9,7 +9,7 @@
     </sql>
 
     <sql id="insertField">  <!--sql/公共部分，可被其他sql引用-->
-        user_id, title, content, type, status, create_time, comment_count, score
+        user_id, entity_type, entity_id, target_id, content, status, create_time
     </sql>
 
     <select id="selectCommentsByEntity" resultType="Comment">
@@ -29,5 +29,10 @@
         and entity_type = #{entityType}
         and entity_id = #{entityId}
     </select>
+
+    <insert id="insertComment" parameterType="Comment">
+        insert into comment(<include refid="insertField"></include>)
+        values(#{userId}, #{entityType}, #{entityId}, #{targetId}, #{content}, #{status}, #{createTime})
+    </insert>
 
 </mapper>
