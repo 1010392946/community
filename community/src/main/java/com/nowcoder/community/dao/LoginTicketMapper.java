@@ -14,6 +14,7 @@ import org.apache.ibatis.annotations.*;
  * @Version 1.0
  */
 @Mapper
+@Deprecated
 public interface LoginTicketMapper {
     //两种方式一种XML，一种注解
     @Insert({

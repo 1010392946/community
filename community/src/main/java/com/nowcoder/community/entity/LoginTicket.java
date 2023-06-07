@@ -26,12 +26,12 @@ public class LoginTicket {
         this.id = id;
     }
 
-    public int getUserid() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(int userid) {
-        this.userId = userid;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getTicket() {
@@ -62,7 +62,7 @@ public class LoginTicket {
     public String toString() {
         return "LoginTicket{" +
                 "id=" + id +
-                ", userid=" + userId +
+                ", userId=" + userId +
                 ", ticket='" + ticket + '\'' +
                 ", status=" + status +
                 ", expired=" + expired +

@@ -39,6 +39,9 @@ public class ServiceLogAspect {
         //用户[1.2.3.4]，在[XXX],访问了[com.nowcoder.community.service.xx()].
         //如下转型是父类向子类转换，有可能会报异常，但是通常我们的request都是基于sevlet
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        if (attributes == null){
+            return;
+        }
         HttpServletRequest request = attributes.getRequest();
         String ip = request.getRemoteHost();
         String now = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
