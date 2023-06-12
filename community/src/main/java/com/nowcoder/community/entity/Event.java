@@ -75,15 +75,4 @@ public class Event {
         return this;
     }
 
-    @Override
-    public String toString() {
-        return "Event{" +
-                "topic='" + topic + '\'' +
-                ", userId=" + userId +
-                ", entityType=" + entityType +
-                ", entityId=" + entityId +
-                ", entityUserId=" + entityUserId +
-                ", data=" + data +
-                '}';
-    }
 }
