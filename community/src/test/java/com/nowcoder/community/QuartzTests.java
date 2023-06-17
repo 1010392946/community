@@ -31,7 +31,7 @@ public class QuartzTests {
     public void testDeleteJob(){
         boolean result = false;
         try {
-            result = scheduler.deleteJob(new JobKey("alphaJob", "alphaJobGroup"));
+            result = scheduler.deleteJob(new JobKey("postScoreRefreshJob", "communityJobGroup"));
             System.out.println(result);
         } catch (SchedulerException e) {
             e.printStackTrace();
