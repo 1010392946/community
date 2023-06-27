@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class WKTests{
     public static void main(String[] args) {
-        String cmd = "D:/postgraduate/workspace/wkhtmltopdf/bin/wkhtmltoimage --quality 75 https://www.nowcoder.com d:/postgraduate/workspace/wkhtmltopdf/wk-images/1.png";
+        String cmd = "E:/postgraduate/workspace/wkhtmltopdf/bin/wkhtmltoimage --quality 75 https://www.nowcoder.com E:/postgraduate/workspace/wkhtmltopdf/wk-images/1.png";
         try {
             Runtime.getRuntime().exec(cmd);
             Thread.sleep(3000);

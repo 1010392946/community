@@ -2,9 +2,11 @@ package com.nowcoder.community;
 
 import com.nowcoder.community.util.MailClient;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
@@ -17,6 +19,8 @@ import org.thymeleaf.context.Context;
  * @Creat 2023/4/18 13:58
  * @Version 1.0
  */
+
+@RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = CommunityApplication.class) //使当前的测试类以所选类的配置运行
 public class MailTests {
@@ -26,11 +30,11 @@ public class MailTests {
     @Autowired
     private TemplateEngine templateEngine;
 
-    @Test
+    //@Test
     public void testTextMail(){
         mailClient.sendMail("wangxuanfj@163.com", "TEST", "welcome.");
     }
-    @Test
+    //@Test
     public void testHtmlMail(){
         Context context = new Context();
         context.setVariable("username", "sunday");

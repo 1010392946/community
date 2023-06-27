@@ -9,9 +9,11 @@ import com.nowcoder.community.entity.LoginTicket;
 import com.nowcoder.community.entity.Message;
 import com.nowcoder.community.entity.User;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 import java.util.List;
@@ -25,6 +27,8 @@ import java.util.List;
  * @Creat 2023/4/9 10:55
  * @Version 1.0
  */
+
+@RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = CommunityApplication.class) //使当前的测试类以所选类的配置运行
 public class MapperTests {
